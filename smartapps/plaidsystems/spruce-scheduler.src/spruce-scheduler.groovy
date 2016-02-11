@@ -758,7 +758,7 @@ def updated() {
 def installSchedule(){	
     if(switches && startTime) {
       def runTime = timeToday(startTime, location.timeZone)           
-      def checktime = timeToday(startTime, location.timeZone).getTime() - 30000 // 120000
+      def checktime = timeToday(startTime, location.timeZone).getTime() - 120000
       log.debug "checktime: $checktime runtime: $runTime"
       if(enable) {
     	subscribe switches, "switch.programOn", manualStart
